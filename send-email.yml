@@ -5,7 +5,7 @@
     - name: Sending an e-mail using AWS SES
       community.general.mail:
         host: "{{ smtp.host }}"
-        port: "{{ smtp.port }}"
+        port: 587
         username: "{{ smtp.username }}"
         password: "{{ smtp.password }}"
         to: "{{ smtp.to_user }}"
