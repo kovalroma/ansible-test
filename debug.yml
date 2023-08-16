@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+    - name: Print debug message
+      debug:
+        msg: This is variable {{ smtp.host }} 
+      delegate_to: localhost
