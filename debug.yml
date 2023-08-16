@@ -4,5 +4,5 @@
   tasks:
     - name: Print debug message
       debug:
-        msg: This is variable {{ smtp.host }} 
+        msg: "This is variable {{ smtp }}"
       delegate_to: localhost
