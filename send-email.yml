@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Sending an e-mail using AWS SES
+      community.general.mail:
+        host: "{{ smtp.host }}"
+        port: "{{ smtp.port }}"
+        username: "{{ smtp.username }}"
+        password: "{{ smtp.password }}"
+        to: "{{ smtp.to_user }}"
+        subject: Ansible-report
+        body: System {{ ansible_hostname }} has been successfully provisioned.
+    delegate_to: localhost
