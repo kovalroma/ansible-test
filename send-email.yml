@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- hosts: 127.0.0.1
+  connection: local
   gather_facts: False
   tasks:
     - name: Sending an e-mail using AWS SES
@@ -11,4 +12,3 @@
         to: "{{ smtp_to_user }}"
         subject: Ansible-report
         body: System has been successfully provisioned.
-      delegate_to: localhost
