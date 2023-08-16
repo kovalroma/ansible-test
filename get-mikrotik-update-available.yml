@@ -1,6 +1,7 @@
 ---
 - name: Check if updates available on Mikrotik
   hosts: all
+  gather_facts: False
   tasks:
     - name: Check if new update available
       raw: system package update check-for-updates
