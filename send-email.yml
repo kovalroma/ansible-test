@@ -9,5 +9,5 @@
         password: "{{ smtp.password }}"
         to: "{{ smtp.to_user }}"
         subject: Ansible-report
-        body: System {{ ansible_hostname }} has been successfully provisioned.
-    delegate_to: localhost
+        body: System has been successfully provisioned.
+      delegate_to: localhost
