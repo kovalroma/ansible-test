@@ -12,3 +12,4 @@
         to: "{{ smtp_to_user }}"
         subject: Ansible-report
         body: System has been successfully provisioned.
+        sender: "{{ smtp_sender }}"
